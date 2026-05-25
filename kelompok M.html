@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU MAKAN HEMAT</title>
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --accent: #FFE66D;
+            --dark: #2C3E50;
+            --light: #F8F9FA;
+            --success: #95E1D3;
+            --warning: #FFA502;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--dark);
+            min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        header h1 { 
+            margin: 0; 
+            font-size: 1.8rem; 
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .hero-icons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .hero-icons span {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            font-size: 1.3rem;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(10px);
+            transition: transform .2s ease;
+        }
+        .hero-icons span:hover {
+            transform: scale(1.1) rotate(10deg);
+        }
+        .hero-panel {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            backdrop-filter: blur(18px);
+            border-radius: 28px;
+            margin: -40px auto 30px;
+            max-width: 1100px;
+            padding: 28px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-panel::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 180px;
+            height: 180px;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.4), transparent 60%);
+            filter: blur(18px);
+        }
+        .hero-panel-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+            align-items: center;
+        }
+        .hero-panel h2 {
+            margin: 0 0 16px;
+            font-size: 2.4rem;
+            line-height: 1.05;
+            color: #fff;
+        }
+        .hero-panel p {
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            max-width: 560px;
+        }
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .hero-button {
+            min-width: 170px;
+        }
+        .hero-feature-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+        }
+        .hero-feature-card {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 18px;
+            padding: 18px;
+            color: #fff;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+            transition: transform .3s ease, background .3s ease;
+        }
+        .hero-feature-card:hover {
+            transform: translateY(-4px);
+            background: rgba(255,255,255,0.28);
+        }
+        .hero-feature-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+        }
+        .hero-feature-card p {
+            margin: 0;
+            color: rgba(255,255,255,0.88);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        main { 
+            max-width: 1200px; 
+            margin: 20px auto; 
+            padding: 0 16px 30px;
+        }
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--dark);
+        }
+        .section-title::before {
+            content: '';
+            width: 4px;
+            height: 20px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        /* Collapsible section styling */
+        details summary {
+            list-style: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0; /* override default summary margin */
+        }
+        details summary::-webkit-details-marker { display: none; }
+        details .card { }
+        details > summary .Berikut adalah versi **rapi, terstruktur, dan profesional** dari perintah pembuatan aplikasi web yang Anda inginkan:
+
+---
+
+# Prototype Website “MENU MAKAN HEMAT”
+
+### Solusi Pengelolaan Makanan Hemat untuk Anak Kos Mahasiswa Undip Semarang
+
+## Deskripsi Umum
+
+Buatlah sebuah prototype aplikasi berbasis web bernama **MENU MAKAN HEMAT** yang ditujukan khusus untuk anak kos, terutama mahasiswa di Universitas Diponegoro.
+Website ini berfungsi membantu pengguna mengatur pola makan hemat, sehat, dan sesuai kebutuhan gizi dengan budget terbatas.
+
+---
+
+# Fitur Utama Website
+
+## 1. Sistem Penentuan Menu Termurah Mingguan
+
+Website harus mampu:
+
+* Menghasilkan rekomendasi menu makanan selama 1 minggu.
+* Menyesuaikan menu berdasarkan budget pengguna.
+* Menampilkan total pengeluaran harian dan mingguan.
+* Mengoptimalkan menu agar tetap hemat namun layak dikonsumsi.
+
+---
+
+## 2. Rekomendasi Tempat Makan dan Pesan Antar
+
+Sistem dapat:
+
+* Merekomendasikan makanan hemat dari:
+
+  * warung makan,
+  * tempat makan sekitar kampus,
+  * ataupun aplikasi pesan antar makanan online.
+* Menampilkan estimasi harga makanan.
+* Memberikan opsi makanan paling ekonomis.
+
+---
+
+## 3. Kalkulator Kebutuhan Kalori Harian
+
+Website harus menyediakan fitur penghitung kebutuhan kalori berdasarkan:
+
+* jenis kelamin,
+* usia,
+* tinggi badan,
+* berat badan.
+
+Output:
+
+* estimasi kebutuhan kalori harian,
+* rekomendasi jumlah makan per hari,
+* saran pola makan sesuai kebutuhan tubuh.
+
+---
+
+## 4. Pilihan Jenis Pola Makan
+
+Saat awal penggunaan, pengguna dapat memilih:
+
+* Makanan hemat sehat
+  atau
+* Makanan hemat tidak sehat (fast food/junk food hemat).
+
+Pilihan ini akan memengaruhi rekomendasi menu selanjutnya.
+
+---
+
+## 5. Filter Preferensi Nutrisi
+
+Pengguna dapat memilih preferensi makanan:
+
+* tinggi serat,
+* tinggi protein,
+* tinggi lemak.
+
+Sistem akan menyesuaikan rekomendasi menu berdasarkan preferensi tersebut.
+
+---
+
+## 6. Filter Alergi Makanan
+
+Website harus menyediakan fitur alergi makanan seperti:
+
+* seafood,
+* telur,
+* susu,
+* kacang,
+* gluten,
+* dan lainnya.
+
+Menu yang direkomendasikan tidak boleh mengandung bahan alergi pengguna.
+
+---
+
+## 7. Rekomendasi Budget Bahan Masakan
+
+Selain rekomendasi makanan siap beli, sistem juga harus:
+
+* memberikan rekomendasi bahan masakan murah,
+* menampilkan estimasi total biaya memasak,
+* membantu pengguna yang lebih suka memasak sendiri.
+
+---
+
+## 8. Rekomendasi Resep Sesuai Budget
+
+Website menyediakan:
+
+* daftar resep sederhana,
+* langkah memasak singkat,
+* estimasi biaya per resep,
+* bahan yang diperlukan,
+* serta estimasi kalori.
+
+Resep harus disesuaikan dengan budget pengguna.
+
+---
+
+## 9. Pengingat Waktu Makan
+
+Sistem memiliki fitur reminder/pengingat makan:
+
+* sarapan,
+* makan siang,
+* makan malam.
+
+Pengingat dapat berupa:
+
+* notifikasi browser,
+* popup,
+* atau alarm sederhana berbasis JavaScript.
+
+---
+
+# Teknologi yang Digunakan
+
+## 1. HTML
+
+Digunakan sebagai:
+
+* struktur utama website,
+* pembuatan halaman,
+* form input,
+* navigasi,
+* dan layout konten.
+
+---
+
+## 2. CSS
+
+Digunakan untuk:
+
+* mempercantik tampilan website,
+* membuat desain modern dan responsif,
+* memberikan tampilan ramah mahasiswa,
+* serta meningkatkan kenyamanan pengguna.
+
+Desain yang diharapkan:
+
+* minimalis,
+* modern,
+* clean UI,
+* dominan warna hijau/oranye yang identik dengan makanan sehat dan hemat.
+
+---
+
+## 3. JavaScript
+
+Digunakan untuk:
+
+* interaksi dinamis website,
+* kalkulator kalori,
+* filter menu,
+* pengingat makan,
+* sistem rekomendasi sederhana,
+* validasi form,
+* dan pengelolaan budget makanan.
+
+---
+
+# Tujuan Website
+
+Website “MENU MAKAN HEMAT” bertujuan membantu mahasiswa:
+
+* mengatur pengeluaran makan,
+* menjaga kesehatan,
+* memilih makanan sesuai kebutuhan,
+* serta tetap dapat makan layak dengan budget terbatas.
+
+---
+
+# Output yang Diharapkan
+
+Prototype website minimal memiliki:
+
+* halaman utama (landing page),
+* halaman rekomendasi menu,
+* fitur kalkulator kalori,
+* filter makanan,
+* reminder makan,
+* dan tampilan responsif untuk desktop maupun mobile.
+section-title::before { display: inline-block; }
+        details > .card, details > * { padding: 0; }
+        /* Toggle icon */
+        details summary::after {
+            content: '▸';
+            margin-left: auto;
+            transform: rotate(0deg);
+            transition: transform .25s ease, color .25s ease;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        details[open] summary::after {
+            transform: rotate(90deg);
+            color: var(--primary);
+        }
+        /* Animated body */
+        .details-body {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height .35s ease, opacity .25s ease, padding .25s ease;
+            padding-top: 0;
+        }
+        details[open] > .details-body {
+            max-height: 1600px; /* large enough to show content */
+            opacity: 1;
+            padding-top: 12px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 16px;
+            transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.8);
+            backdrop-filter: blur(10px);
+        }
+        .card:hover { 
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+        .card.accent {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+            border: 1px solid rgba(255, 107, 107, 0.2);
+        }
+        .grid-responsive {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+        .input-group { 
+            margin-bottom: 14px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+        input[type="number"], input[type="time"], input[type="text"], select, textarea {
+            width: 100%;
+            border: 2px solid #E8EAED;
+            border-radius: 10px;
+            padding: 10px 12px;
+            font-size: 0.95rem;
+            background: #FAFBFC;
+            transition: all .3s ease;
+            font-family: inherit;
+        }
+        input:focus, select:focus, textarea:focus { 
+            outline: none; 
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.1);
+            background: #fff;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        .checkbox-group label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border: 2px solid #E8EAED;
+            border-radius: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background: #FAFBFC;
+            transition: all .2s ease;
+        }
+        .checkbox-group label:hover {
+            border-color: var(--secondary);
+            background: rgba(78, 205, 196, 0.05);
+        }
+        .checkbox-group input { 
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 10px;
+            padding: 11px 20px;
+            background: linear-gradient(135deg, var(--primary), #FF5252);
+            color: #fff;
+            font-size: 0.96rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .3s ease;
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.3);
+        }
+        .button:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(255, 107, 107, 0.4);
+        }
+        .button:active { transform: scale(0.98); }
+        .button-secondary {
+            background: linear-gradient(135deg, var(--secondary), #3DB8AF);
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.3);
+        }
+        .button-secondary:hover {
+            box-shadow: 0 12px 25px rgba(78, 205, 196, 0.4);
+        }
+        .button-accent {
+            background: linear-gradient(135deg, var(--accent), #FFD700);
+            color: var(--dark);
+            box-shadow: 0 8px 20px rgba(255, 230, 109, 0.3);
+        }
+        .button-accent:hover {
+            box-shadow: 0 12px 25px rgba(255, 230, 109, 0.4);
+        }
+        .button-small {
+            padding: 8px 14px;
+            font-size: 0.85rem;
+        }
+        .button-success {
+            background: linear-gradient(135deg, var(--success), #7FDBCA);
+            box-shadow: 0 8px 20px rgba(149, 225, 211, 0.3);
+        }
+        .button-success:hover {
+            box-shadow: 0 12px 25px rgba(149, 225, 211, 0.4);
+        }
+        .result-box {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(78, 205, 196, 0.08));
+            border: 2px solid rgba(78, 205, 196, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 12px;
+            white-space: pre-line;
+            color: var(--dark);
+            line-height: 1.6;
+            font-size: 0.95rem;
+            animation: slideIn .3s ease;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            animation: fadeIn .3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 25px;
+            border-radius: 16px;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp .3s ease;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color .2s ease;
+        }
+        .close:hover,
+        .close:focus {
+            color: var(--primary);
+        }
+        .modal h2 {
+            margin-top: 0;
+            color: var(--primary);
+            border-bottom: 2px solid rgba(78, 205, 196, 0.3);
+            padding-bottom: 10px;
+        }
+        .list-grid { 
+            display: grid; 
+            gap: 12px; 
+            margin-top: 12px;
+        }
+        .item-card {
+            border: 2px solid #E8EAED;
+            border-radius: 12px;
+            padding: 14px;
+            background: linear-gradient(135deg, #FAFBFC, #F5F7FA);
+            position: relative;
+            overflow: hidden;
+            transition: all .3s ease;
+            cursor: pointer;
+        }
+        .item-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 8px 20px rgba(78, 205, 196, 0.2);
+            transform: translateX(5px);
+        }
+        .item-card::before {
+            content: attr(data-icon);
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 2rem;
+            opacity: 0.15;
+        }
+        .item-card h3 { 
+            margin: 0 0 6px; 
+            font-size: 1rem;
+            color: var(--primary);
+        }
+        .item-card small { 
+            color: #666;
+            font-size: 0.85rem;
+        }
+        .item-card p { 
+            margin: 8px 0 0; 
+            line-height: 1.5;
+            font-size: 0.92rem;
+        }
+        .meta { 
+            display: flex; 
+            flex-wrap: wrap; 
+            gap: 6px; 
+            margin-top: 10px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--accent), #FFE082);
+            color: var(--dark);
+            font-size: 0.78rem;
+            font-weight: 600;
+            box-shadow: 0 2px 8px rgba(255, 230, 109, 0.3);
+        }
+        .badge.success {
+            background: linear-gradient(135deg, var(--success), #7FDBCA);
+            color: #fff;
+        }
+        .badge.info {
+            background: linear-gradient(135deg, var(--secondary), #3DB8AF);
+            color: #fff;
+        }
+        .highlight {
+            display: inline-block;
+            font-weight: 700;
+            color: var(--primary);
+            background: rgba(255, 107, 107, 0.1);
+            padding: 0 4px;
+            border-radius: 4px;
+        }
+        .meal-frequency-selector {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+        .freq-btn {
+            padding: 8px 16px;
+            border: 2px solid #E8EAED;
+            border-radius: 20px;
+            background: #fff;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all .2s ease;
+            color: var(--dark);
+        }
+        .freq-btn.active {
+            background: linear-gradient(135deg, var(--primary), #FF5252);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .freq-btn:hover {
+            border-color: var(--secondary);
+        }
+        .delivery-option {
+            border: 2px solid #E8EAED;
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all .2s ease;
+            background: #fff;
+        }
+        .delivery-option.selected {
+            border-color: var(--primary);
+            background: rgba(255, 107, 107, 0.1);
+        }
+        .delivery-option input[type="radio"] {
+            margin-right: 8px;
+        }
+        .price-summary {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(78, 205, 196, 0.08));
+            border: 2px solid rgba(78, 205, 196, 0.3);
+            border-radius: 12px;
+            padding: 14px;
+            margin-top: 12px;
+        }
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        .price-item.total {
+            border-top: 2px solid rgba(78, 205, 196, 0.3);
+            padding-top: 8px;
+            margin-top: 8px;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .quantity-btn {
+            width: 35px;
+            height: 35px;
+            border: 2px solid #E8EAED;
+            border-radius: 8px;
+            background: #fff;
+            cursor: pointer;
+            font-weight: 700;
+            color: var(--primary);
+            transition: all .2s ease;
+        }
+        .quantity-btn:hover {
+            background: linear-gradient(135deg, var(--primary), #FF5252);
+            color: #fff;
+            border-color: var(--primary);
+        }
+        .quantity-display {
+            flex: 1;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        .location-selector {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+        .location-btn {
+            padding: 10px;
+            border: 2px solid #E8EAED;
+            border-radius: 10px;
+            background: #fff;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all .2s ease;
+            color: var(--dark);
+        }
+        .location-btn.active {
+            background: linear-gradient(135deg, var(--secondary), #3DB8AF);
+            color: #fff;
+            border-color: var(--secondary);
+        }
+        .success-message {
+            background: linear-gradient(135deg, var(--success), #7FDBCA);
+            color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .success-message h3 {
+            margin: 0 0 10px;
+            font-size: 1.2rem;
+        }
+        .success-message p {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.4rem; }
+            .section-title { font-size: 0.95rem; }
+            .button { padding: 9px 16px; font-size: 0.9rem; }
+            .modal-content { margin: 10% auto; max-width: 95%; }
+            .location-selector {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🍱 MENU MAKAN HEMAT</h1>
+        <div class="hero-icons">
+            <span>🥗</span>
+            <span>💰</span>
+            <span>⏰</span>
+            <span>🔥</span>
+            <span>✨</span>
+        </div>
+    </header>
+
+    <div class="hero-panel">
+        <div class="hero-panel-inner">
+            <div>
+                <div class="section-title">✨ Selamat Datang</div>
+                <h2>Menu Makan Hemat jadi lebih menarik dan interaktif.</h2>
+                <p>Buka jendela baru untuk fitur lengkap, atau lihat ringkasan fitur utama terlebih dahulu.</p>
+                <div class="hero-buttons">
+                    <button class="button button-secondary hero-button" onclick="jumpToFeatures()">Lihat Fitur Sekilas</button>
+                    <button class="button button-accent hero-button" onclick="openAdvancedWindow()">Buka Fitur Lanjutan</button>
+                </div>
+            </div>
+            <div class="hero-feature-grid">
+                <div class="hero-feature-card">
+                    <h3>📋 Rancang menu mingguan</h3>
+                    <p>Pilih anggaran, pola makan, dan preferensi untuk rekomendasi menu hemat.</p>
+                </div>
+                <div class="hero-feature-card">
+                    <h3>🔥 Kalkulator kalori</h3>
+                    <p>Hitung kebutuhan kalori harian dengan mudah berdasarkan data tubuhmu.</p>
+                </div>
+                <div class="hero-feature-card">
+                    <h3>🏪 Rekomendasi tempat</h3>
+                    <p>Temukan warteg, kantin, dan delivery hemat yang sesuai budget.</p>
+                </div>
+                <div class="hero-feature-card">
+                    <h3>🥣 Resep hemat</h3>
+                    <p>Dapatkan ide resep murah dengan bahan sederhana dan proses mudah.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="fitur-lanjutan">
+        <div class="grid-responsive">
+            <details class="card accent">
+                <summary class="section-title">🍛 Rancang Menu Mingguan</summary>
+                <div class="input-group">
+                    <label for="budget">💵 Anggaran mingguan (IDR)</label>
+                    <input type="number" id="budget" min="0" placeholder="Contoh: 200000">
+                </div>
+                <div class="input-group">
+                    <label>🍽️ Berapa kali makan per hari?</label>
+                    <div class="meal-frequency-selector">
+                        <button class="freq-btn active" onclick="selectMealFrequency(2)">2x Sehari</button>
+                        <button class="freq-btn" onclick="selectMealFrequency(3)">3x Sehari</button>
+                        <button class="freq-btn" onclick="selectMealFrequency(4)">4x Sehari</button>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="menuType">🍽️ Jenis pola makan</label>
+                    <select id="menuType">
+                        <option value="Sehat">Makanan hemat sehat</option>
+                        <option value="Junk">Makanan hemat tidak sehat</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label>💪 Preferensi nutrisi</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="prefProtein"> Protein tinggi</label>
+                        <label><input type="checkbox" id="prefFiber"> Serat tinggi</label>
+                        <label><input type="checkbox" id="prefFat"> Lemak tinggi</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>⚠️ Alergi makanan</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" id="allergyIkan"> Seafood</label>
+                        <label><input type="checkbox" id="allergyTelur"> Telur</label>
+                        <label><input type="checkbox" id="allergySusu"> Susu</label>
+                        <label><input type="checkbox" id="allergyKacang"> Kacang</label>
+                        <label><input type="checkbox" id="allergyGluten"> Gluten</label>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button class="button" onclick="generateWeeklyPlan()">📋 Rancang Menu</button>
+                    <button class="button button-accent" onclick="orderWeeklyMenu()">🛒 Pesan</button>
+                </div>
+                <div id="menuResult" class="result-box">Klik "Rancang Menu" untuk mulai 👆</div>
+                <div id="orderResult" class="result-box" style="display:none;"></div>
+            </details>
+
+            <details class="card accent">
+                <summary class="section-title">🔥 Kalkulator Kalori</summary>
+                <div class="input-group">
+                    <label for="age">🎂 Usia (tahun)</label>
+                    <input type="number" id="age" min="10" max="80" placeholder="20">
+                </div>
+                <div class="input-group">
+                    <label for="height">📏 Tinggi badan (cm)</label>
+                    <input type="number" id="height" min="120" max="210" placeholder="168">
+                </div>
+                <div class="input-group">
+                    <label for="weight">⚖️ Berat badan (kg)</label>
+                    <input type="number" id="weight" min="30" max="130" placeholder="58">
+                </div>
+                <div class="input-group">
+                    <label for="gender">👤 Jenis kelamin</label>
+                    <select id="gender">
+                        <option value="male">Laki-laki</option>
+                        <option value="female">Perempuan</option>
+                    </select>
+                </div>
+                <button class="button button-secondary" onclick="calculateCalories()">⚡ Hitung</button>
+                <div id="calorieResult" class="result-box">Isi data untuk lihat kebutuhan kalori 👆</div>
+            </details>
+        </div>
+
+        <details class="card">
+            <summary class="section-title">🏪 Rekomendasi Tempat Makan</summary>
+            <div class="grid-responsive">
+                <div class="input-group">
+                    <label for="placeType">📍 Jenis tempat</label>
+                    <select id="placeType">
+                        <option value="all">Semua tempat</option>
+                        <option value="Warteg">Warteg</option>
+                        <option value="Sekitar kampus">Sekitar kampus</option>
+                        <option value="Online / delivery">Online / delivery</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="placeBudget">💰 Budget maksimum (IDR)</label>
+                    <input type="number" id="placeBudget" min="0" placeholder="15000">
+                </div>
+            </div>
+            <button class="button button-secondary" onclick="showPlaceRecommendations()">🔍 Cari Tempat</button>
+            <div id="placeResult" class="list-grid"></div>
+        </details>
+
+        <details class="card">
+            <summary class="section-title">🥣 Resep Masakan Hemat</summary>
+            <button class="button button-secondary" onclick="showRecipeSuggestions()">👨‍🍳 Lihat Resep</button>
+            <div id="recipeResult" class="list-grid"></div>
+        </details>
+
+        <details class="card">
+            <summary class="section-title">⏰ Pengingat Waktu Makan</summary>
+            <div class="grid-responsive">
+                <div class="input-group">
+                    <label for="breakfastTime">🌅 Sarapan</label>
+                    <input type="time" id="breakfastTime" value="07:30">
+                </div>
+                <div class="input-group">
+                    <label for="lunchTime">🌞 Makan siang</label>
+                    <input type="time" id="lunchTime" value="12:30">
+                </div>
+                <div class="input-group">
+                    <label for="dinnerTime">🌙 Makan malam</label>
+                    <input type="time" id="dinnerTime" value="18:30">
+                </div>
+            </div>
+            <button class="button button-accent" onclick="setMealReminders()">🔔 Aktifkan Reminder</button>
+            <div id="reminderStatus" class="result-box">Reminder belum aktif ⏳</div>
+        </details>
+    </main>
+
+    <!-- Modal Pesanan -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeOrderModal()">&times;</span>
+            <h2>🛒 Detail Pesanan</h2>
+            
+            <div id="placeInfo" style="margin-bottom: 15px;"></div>
+
+            <div class="input-group">
+                <label>📍 Lokasi Tujuan:</label>
+                <div class="location-selector">
+                    <button class="location-btn active" onclick="selectLocation('current')">📍 Lokasi Sekarang</button>
+                    <button class="location-btn" onclick="selectLocation('custom')">🏠 Lokasi Lain</button>
+                </div>
+                <input type="text" id="customLocation" placeholder="Contoh: Jl. Diponegoro No.5" style="display:none; margin-top: 8px;">
+            </div>
+
+            <div class="input-group">
+                <label>📍 Lihat di Google Maps:</label>
+                <button class="button button-secondary" style="width: 100%;" id="mapsBtn" onclick="openGoogleMaps()">🗺️ Buka Google Maps</button>
+            </div>
+
+            <div class="input-group">
+                <label>🍽️ Jumlah Pesanan:</label>
+                <div class="quantity-selector">
+                    <button class="quantity-btn" onclick="decreaseQuantity()">−</button>
+                    <div class="quantity-display" id="quantityDisplay">1</div>
+                    <button class="quantity-btn" onclick="increaseQuantity()">+</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>📝 Catatan Pesanan (opsional):</label>
+                <textarea id="orderNotes" placeholder="Contoh: Pedas sedang, tanpa bawang merah, dll..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>🚚 Metode Pengiriman:</label>
+                <div id="deliveryOptions"></div>
+            </div>
+
+            <div class="price-summary">
+                <div class="price-item">
+                    <span>Harga per item:</span>
+                    <span id="itemPrice">Rp 0</span>
+                </div>
+                <div class="price-item">
+                    <span>Jumlah item:</span>
+                    <span id="totalItems">1x</span>
+                </div>
+                <div class="price-item">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">Rp 0</span>
+                </div>
+                <div class="price-item" id="shippingRow" style="display:none;">
+                    <span>Ongkir:</span>
+                    <span id="shipping">Rp 0</span>
+                </div>
+                <div class="price-item total">
+                    <span>Total Harga:</span>
+                    <span id="totalPrice">Rp 0</span>
+                </div>
+            </div>
+
+            <div class="btn-group" style="margin-top: 20px;">
+                <button class="button button-success" style="flex: 1;" onclick="completeOrder()">✅ Selesaikan Pesanan</button>
+                <button class="button" style="flex: 1; background: #ccc;" onclick="closeOrderModal()">❌ Batal</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Konfirmasi Pesanan -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content" style="max-width: 450px;">
+            <span class="close" onclick="closeConfirmModal()">&times;</span>
+            <div id="confirmContent"></div>
+            <div class="btn-group" style="margin-top: 20px;">
+                <button class="button button-success" style="flex: 1;" onclick="closeConfirmModal()">🎉 Selesai</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentWeeklyPlan = [];
+        let mealFrequency = 2;
+        let selectedPlace = null;
+        let orderQuantity = 1;
+        let selectedDelivery = 'pickup';
+        let selectedLocation = 'current';
+        let userLocation = { lat: -7.2505, lng: 112.7508 }; // Default Surabaya
+
+        const foodOptions = [
+            { name: "Nasi Ayam Geprek", type: "Junk", cost: 18000, calories: 650, tags:["Protein tinggi","Lemak tinggi"], allergens:["Gluten","Telur"] },
+            { name: "Nasi Lele + Sayur", type: "Sehat", cost: 15000, calories: 480, tags:["Protein","Serat tinggi"], allergens:["Ikan"] },
+            { name: "Capcay Warteg", type: "Sehat", cost: 12000, calories: 250, tags:["Serat tinggi"], allergens:["Kerang"] },
+            { name: "Indomie Telur Kornet", type: "Junk", cost: 16000, calories: 700, tags:["Lemak tinggi"], allergens:["Gluten","Telur"] },
+            { name: "Nasi Pecel Tempe", type: "Sehat", cost: 13000, calories: 420, tags:["Serat","Protein nabati"], allergens:["Kacang"] },
+            { name: "Ayam Bakar + Lalapan", type: "Sehat", cost: 20000, calories: 500, tags:["Protein tinggi"], allergens:["Kedelai"] },
+            { name: "Rice Bowl Sambal Matah", type: "Junk", cost: 22000, calories: 620, tags:["Protein"], allergens:["Telur"] },
+            { name: "Sop Ikan", type: "Sehat", cost: 25000, calories: 350, tags:["Protein rendah lemak"], allergens:["Ikan"] },
+            { name: "Burjo Nasi Telur", type: "Junk", cost: 10000, calories: 550, tags:["Karbohidrat tinggi"], allergens:["Telur"] },
+            { name: "Oatmeal Pisang Susu", type: "Sehat", cost: 15000, calories: 300, tags:["Serat tinggi"], allergens:["Susu"] }
+        ];
+
+        const placeOptions = [
+            { name:"Warteg Hemat A", type:"Warteg", menu:"Nasi rames, lele + sayur", priceMin:10000, priceMax:20000, status:"Buka 7am-9pm", tags:["Protein","Sayur"], allergens:["Ikan","Telur"], area:"📍 Kampus", lat: -7.2525, lng: 112.7510, distance: "0.5 km" },
+            { name:"Kantin Kampus", type:"Sekitar kampus", menu:"Nasi rames telur balado", priceMin:10000, priceMax:18000, status:"Dekat kampus", tags:["Karbohidrat","Protein"], allergens:["Telur"], area:"📍 Undip", lat: -7.2530, lng: 112.7520, distance: "0.8 km" },
+            { name:"Sop Ikan Lokal", type:"Sekitar kampus", menu:"Sop ikan", priceMin:25000, priceMax:40000, status:"Dine in & delivery", tags:["Protein rendah lemak"], allergens:["Ikan"], area:"📍 Kos", lat: -7.2515, lng: 112.7495, distance: "1.2 km" },
+            { name:"Warung Burjo", type:"Warteg", menu:"Indomie telur", priceMin:8000, priceMax:15000, status:"24 jam", tags:["Karbohidrat tinggi"], allergens:["Gluten","Telur"], area:"📍 Kos", lat: -7.2540, lng: 112.7505, distance: "1.5 km" },
+            { name:"Delivery Sambal", type:"Online / delivery", menu:"Ayam bakar sambal", priceMin:25000, priceMax:50000, status:"Delivery", tags:["Protein"], allergens:["Kedelai","Telur"], area:"📍 Online", lat: -7.2500, lng: 112.7530, distance: "2.0 km" },
+            { name:"Warteg Sehat", type:"Warteg", menu:"Nasi bandeng + sayur", priceMin:12000, priceMax:18000, status:"7am-9pm", tags:["Protein","Serat"], allergens:["Ikan"], area:"📍 Kampus", lat: -7.2535, lng: 112.7515, distance: "0.3 km" }
+        ];
+
+        const recipes = [
+            { name:"Nasi Ayam Lada Hitam", cost:18000, calories:500, ingredients:["ayam","bawang","lada","nasi"], steps:"Tumis ayam, tambahkan lada, sajikan dengan nasi.", type:"High protein", allergens:["Kedelai"] },
+            { name:"Oatmeal Pisang", cost:12000, calories:300, ingredients:["oat","susu","pisang"], steps:"Rebus oat, campur susu, tambahkan pisang.", type:"Healthy breakfast", allergens:["Susu","Gluten"] },
+            { name:"Tempe Tumis Sayur", cost:10000, calories:280, ingredients:["tempe","wortel","buncis"], steps:"Tumis semua bahan dengan sedikit minyak.", type:"Vegetarian", allergens:["Kedelai"] },
+            { name:"Sop Ikan Sederhana", cost:20000, calories:350, ingredients:["ikan","tomat","daun bawang"], steps:"Rebus ikan dengan sayur sampai matang.", type:"Low fat", allergens:["Ikan"] },
+            { name:"Indomie Telur Sayur", cost:11000, calories:550, ingredients:["mie","telur","sawi"], steps:"Rebus mie, campur telur dan sayur.", type:"Comfort food", allergens:["Gluten","Telur"] },
+            { name:"Rice Bowl Tuna Mayo", cost:22000, calories:600, ingredients:["tuna","mayo","nasi"], steps:"Campur tuna dengan mayo, sajikan di atas nasi.", type:"Fast meal", allergens:["Ikan","Telur"] },
+            { name:"Salad Buah Yogurt", cost:18000, calories:250, ingredients:["apel","melon","yogurt"], steps:"Potong buah, campur dengan yogurt.", type:"Dessert sehat", allergens:["Susu"] }
+        ];
+
+        // ... existing functions ...
+        function selectMealFrequency(freq) {
+            mealFrequency = freq;
+            document.querySelectorAll('.freq-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function getUserPreferences() {
+            const menuType = document.getElementById("menuType").value;
+            const preferenceTags = [];
+            if (document.getElementById("prefProtein").checked) preferenceTags.push("Protein tinggi");
+            if (document.getElementById("prefFiber").checked) preferenceTags.push("Serat tinggi");
+            if (document.getElementById("prefFat").checked) preferenceTags.push("Lemak tinggi");
+
+            const allergies = [];
+            if (document.getElementById("allergyIkan").checked) allergies.push("Ikan");
+            if (document.getElementById("allergyTelur").checked) allergies.push("Telur");
+            if (document.getElementById("allergySusu").checked) allergies.push("Susu");
+            if (document.getElementById("allergyKacang").checked) allergies.push("Kacang");
+            if (document.getElementById("allergyGluten").checked) allergies.push("Gluten");
+
+            return { menuType, preferenceTags, allergies };
+        }
+
+        function preferenceMatch(item, tags) {
+            return tags.some(tag => item.tags.some(itemTag => itemTag.toLowerCase().includes(tag.toLowerCase().split(" ")[0])));
+        }
+
+        function generateWeeklyPlan() {
+            const budget = Number(document.getElementById("budget").value);
+            if (!budget || budget <= 0) {
+                document.getElementById("menuResult").innerText = "❌ Masukkan anggaran mingguan yang valid.";
+                return;
+            }
+
+            const preferences = getUserPreferences();
+            let candidate = foodOptions.filter(item => item.type === preferences.menuType);
+
+            if (preferences.preferenceTags.length) {
+                candidate = candidate.filter(item => preferenceMatch(item, preferences.preferenceTags));
+            }
+            candidate = candidate.filter(item => !preferences.allergies.some(allergy => item.allergens.includes(allergy)));
+
+            if (!candidate.length) {
+                document.getElementById("menuResult").innerText = "❌ Tidak ada menu yang cocok. Coba ubah filter atau jenis pola makan.";
+                return;
+            }
+
+            candidate.sort((a,b) => a.cost - b.cost);
+            const totalMeals = 7 * mealFrequency;
+            const dailyBudget = Math.floor(budget / 7);
+            
+            let weeklyPlan = [];
+            let totalCost = 0;
+            let totalCalories = 0;
+            
+            for (let i = 0; i < totalMeals; i++) {
+                const choices = candidate.filter(item => item.cost <= dailyBudget + 3000);
+                const choice = choices[Math.floor(Math.random() * choices.length)] || candidate[0];
+                weeklyPlan.push(choice);
+                totalCost += choice.cost;
+                totalCalories += choice.calories;
+            }
+
+            currentWeeklyPlan = weeklyPlan;
+
+            let result = `✅ RENCANA MENU MINGGUAN (${mealFrequency}x MAKAN/HARI)\n\n`;
+            
+            let mealIndex = 0;
+            for (let day = 1; day <= 7; day++) {
+                const dayName = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'][day - 1];
+                result += `📅 ${dayName} (Hari ${day})\n`;
+                
+                const mealTimes = mealFrequency === 2 
+                    ? ['🌅 Pagi', '🌙 Malam']
+                    : mealFrequency === 3
+                    ? ['🌅 Sarapan', '🌞 Siang', '🌙 Malam']
+                    : ['🌅 Sarapan', '🥤 Snack', '🌞 Siang', '🌙 Malam'];
+                
+                let dayTotal = 0;
+                let dayCalories = 0;
+                for (let m = 0; m < mealFrequency; m++) {
+                    const meal = weeklyPlan[mealIndex];
+                    result += `  ${mealTimes[m]}: ${meal.name} - Rp ${meal.cost.toLocaleString('id-ID')} (${meal.calories} kkal)\n`;
+                    dayTotal += meal.cost;
+                    dayCalories += meal.calories;
+                    mealIndex++;
+                }
+                result += `  💰 Total hari: Rp ${dayTotal.toLocaleString('id-ID')} | 🔥 ${dayCalories} kkal\n\n`;
+            }
+
+            result += `\n📊 RINGKASAN MINGGUAN:\n`;
+            result += `💰 Total pengeluaran: Rp ${totalCost.toLocaleString('id-ID')}\n`;
+            result += `📈 Rata-rata per hari: Rp ${Math.round(totalCost/7).toLocaleString('id-ID')}\n`;
+            result += `🔥 Total kalori/minggu: ${totalCalories} kkal\n`;
+            result += `📊 Rata-rata kalori per hari: ${Math.round(totalCalories/7)} kkal`;
+
+            document.getElementById("menuResult").innerText = result;
+            document.getElementById("orderResult").style.display = "none";
+        }
+
+        function orderWeeklyMenu() {
+            if (!currentWeeklyPlan.length) {
+                document.getElementById("orderResult").innerText = "❌ Rancang menu terlebih dahulu!";
+                document.getElementById("orderResult").style.display = "block";
+                return;
+            }
+
+            const totalCost = currentWeeklyPlan.reduce((sum, item) => sum + item.cost, 0);
+            let orderText = `🛒 RINGKASAN PESANAN MINGGUAN (${mealFrequency}x MAKAN/HARI)\n\n`;
+            
+            let mealIndex = 0;
+            for (let day = 1; day <= 7; day++) {
+                const dayName = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu', 'Minggu'][day - 1];
+                orderText += `📅 ${dayName}:\n`;
+                
+                const mealTimes = mealFrequency === 2 
+                    ? ['Pagi', 'Malam']
+                    : mealFrequency === 3
+                    ? ['Sarapan', 'Siang', 'Malam']
+                    : ['Sarapan', 'Snack', 'Siang', 'Malam'];
+                
+                for (let m = 0; m < mealFrequency; m++) {
+                    const meal = currentWeeklyPlan[mealIndex];
+                    orderText += `  • ${mealTimes[m]}: ${meal.name} - Rp ${meal.cost.toLocaleString('id-ID')}\n`;
+                    mealIndex++;
+                }
+                orderText += '\n';
+            }
+            
+            orderText += `✅ TOTAL: Rp ${totalCost.toLocaleString('id-ID')}\n\nPesan via aplikasi atau warung terdekat! 📱`;
+            document.getElementById("orderResult").innerText = orderText;
+            document.getElementById("orderResult").style.display = "block";
+        }
+
+        function calculateCalories() {
+            const age = Number(document.getElementById("age").value);
+            const height = Number(document.getElementById("height").value);
+            const weight = Number(document.getElementById("weight").value);
+            const gender = document.getElementById("gender").value;
+
+            if (!age || !height || !weight) {
+                document.getElementById("calorieResult").innerText = "❌ Lengkapi semua data terlebih dahulu.";
+                return;
+            }
+
+            const bmr = gender === "male"
+                ? 10 * weight + 6.25 * height - 5 * age + 5
+                : 10 * weight + 6.25 * height - 5 * age - 161;
+            const dailyCalories = Math.round(bmr * 1.2);
+            const meals = dailyCalories <= 1800 ? 3 : 4;
+
+            document.getElementById("calorieResult").innerText =
+                `⚡ KEBUTUHAN KALORI HARIAN:\n\n🔥 ${dailyCalories} kkal\n\n🍽️ Jumlah makan: ${meals} kali sehari\n\n💡 Tips: Porsi seimbang protein, serat & sayur`;
+        }
+
+        function showPlaceRecommendations() {
+            const preferences = getUserPreferences();
+            const selectedType = document.getElementById("placeType").value;
+            const maxPrice = Number(document.getElementById("placeBudget").value) || Infinity;
+
+            const allowed = placeOptions.filter(place => {
+                const typeMatch = selectedType === "all" || place.type === selectedType;
+                const priceMatch = place.priceMin <= maxPrice;
+                const allergyMatch = !preferences.allergies.some(allergy => place.allergens.includes(allergy));
+                return typeMatch && priceMatch && allergyMatch;
+            });
+
+            const container = document.getElementById("placeResult");
+            container.innerHTML = "";
+
+            if (!allowed.length) {
+                container.innerHTML = `<div class="item-card" data-icon="🔍"><h3>Tidak Ada Hasil</h3><p>Coba ubah filter atau naikkan budget 👆</p></div>`;
+                return;
+            }
+
+            allowed.forEach(place => {
+                const card = document.createElement("div");
+                card.className = "item-card";
+                card.setAttribute("data-icon", "🏪");
+                card.innerHTML = `
+                    <h3>🎯 ${place.name}</h3>
+                    <small>${place.area} | 📍 ${place.distance}</small>
+                    <p><strong>Menu:</strong> ${place.menu}</p>
+                    <div class="meta">
+                        <span class="badge info">${place.type}</span>
+                        <span class="badge">Rp ${place.priceMin} - ${place.priceMax}</span>
+                        <span class="badge success">${place.status}</span>
+                    </div>
+                    <button class="button button-accent" style="width:100%; margin-top:10px; font-size:0.9rem;" onclick="openOrderModal(${placeOptions.indexOf(place)})">🛒 Pesan</button>`;
+                container.appendChild(card);
+            });
+        }
+
+        function openOrderModal(placeIndex) {
+            selectedPlace = placeOptions[placeIndex];
+            orderQuantity = 1;
+            selectedDelivery = 'pickup';
+            selectedLocation = 'current';
+            
+            // Update place info
+            document.getElementById("placeInfo").innerHTML = `
+                <div style="background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(78, 205, 196, 0.08)); border-radius: 10px; padding: 12px;">
+                    <h3 style="margin: 0 0 8px; color: var(--primary);">${selectedPlace.name}</h3>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">📍 ${selectedPlace.area} | ${selectedPlace.distance}</p>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">🍽️ ${selectedPlace.menu}</p>
+                    <p style="margin: 5px 0; font-weight: 600; color: var(--accent);">💰 Rp ${selectedPlace.priceMin.toLocaleString('id-ID')} per item</p>
+                </div>
+            `;
+
+            // Generate delivery options
+            const deliveryHTML = `
+                <div class="delivery-option selected" onclick="selectDelivery('pickup')">
+                    <input type="radio" name="delivery" value="pickup" checked>
+                    <strong>🚶 Ambil Sendiri</strong>
+                    <p style="margin: 5px 0; font-size: 0.85rem;">Gratis ongkir</p>
+                </div>
+                <div class="delivery-option" onclick="selectDelivery('delivery')">
+                    <input type="radio" name="delivery" value="delivery">
+                    <strong>🚗 Pengiriman (GrabFood/GoFood)</strong>
+                    <p style="margin: 5px 0; font-size: 0.85rem;">Ongkir Rp 5.000 - Rp 15.000</p>
+                </div>
+            `;
+            document.getElementById("deliveryOptions").innerHTML = deliveryHTML;
+
+            // Update maps button
+            document.getElementById("mapsBtn").onclick = () => openGoogleMaps();
+
+            updateOrderPrice();
+            document.getElementById("orderModal").style.display = "block";
+        }
+
+        function closeOrderModal() {
+            document.getElementById("orderModal").style.display = "none";
+        }
+
+        function selectDelivery(type) {
+            selectedDelivery = type;
+            document.querySelectorAll('.delivery-option').forEach(opt => opt.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+            document.querySelector(`input[value="${type}"]`).checked = true;
+            updateOrderPrice();
+        }
+
+        function selectLocation(type) {
+            selectedLocation = type;
+            document.querySelectorAll('.location-btn').forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+            document.getElementById("customLocation").style.display = type === 'custom' ? 'block' : 'none';
+        }
+
+        function increaseQuantity() {
+            orderQuantity++;
+            updateOrderPrice();
+        }
+
+        function decreaseQuantity() {
+            if (orderQuantity > 1) {
+                orderQuantity--;
+                updateOrderPrice();
+            }
+        }
+
+        function updateOrderPrice() {
+            const itemPrice = selectedPlace.priceMin;
+            const subtotal = itemPrice * orderQuantity;
+            let shipping = 0;
+            
+            if (selectedDelivery === 'delivery') {
+                shipping = 10000; // Default shipping
+            }
+
+            const total = subtotal + shipping;
+
+            document.getElementById("itemPrice").innerText = `Rp ${itemPrice.toLocaleString('id-ID')}`;
+            document.getElementById("quantityDisplay").innerText = orderQuantity;
+            document.getElementById("totalItems").innerText = `${orderQuantity}x`;
+            document.getElementById("subtotal").innerText = `Rp ${subtotal.toLocaleString('id-ID')}`;
+            
+            const shippingRow = document.getElementById("shippingRow");
+            if (selectedDelivery === 'delivery') {
+                shippingRow.style.display = 'flex';
+                document.getElementById("shipping").innerText = `Rp ${shipping.toLocaleString('id-ID')}`;
+            } else {
+                shippingRow.style.display = 'none';
+            }
+            
+            document.getElementById("totalPrice").innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        function openGoogleMaps() {
+            const placeCoords = `${selectedPlace.lat},${selectedPlace.lng}`;
+            const mapUrl = `https://www.google.com/maps/search/${selectedPlace.name}/@${placeCoords},15z`;
+            window.open(mapUrl, '_blank');
+        }
+
+        function completeOrder() {
+            const notes = document.getElementById("orderNotes").value;
+            const location = selectedLocation === 'current' ? 'Lokasi saat ini' : document.getElementById("customLocation").value || 'Lokasi saat ini';
+            const itemPrice = selectedPlace.priceMin;
+            const subtotal = itemPrice * orderQuantity;
+            let shipping = 0;
+            
+            if (selectedDelivery === 'delivery') {
+                shipping = 10000;
+            }
+
+            const total = subtotal + shipping;
+
+            const confirmHTML = `
+                <div class="success-message">
+                    <h3>✅ Pesanan Berhasil!</h3>
+                    <p>Pesanan Anda telah diproses</p>
+                </div>
+
+                <div style="background: #f5f7fa; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 10px; color: var(--primary);">📍 Detail Tempat Makan</h4>
+                    <p style="margin: 5px 0;"><strong>${selectedPlace.name}</strong></p>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">🏷️ ${selectedPlace.area} | ${selectedPlace.distance}</p>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">🍽️ ${selectedPlace.menu}</p>
+                </div>
+
+                <div style="background: #f5f7fa; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 10px; color: var(--primary);">🛒 Detail Pesanan</h4>
+                    <p style="margin: 5px 0;"><strong>${selectedPlace.menu}</strong></p>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">💯 Jumlah: ${orderQuantity}x</p>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">💰 Subtotal: Rp ${subtotal.toLocaleString('id-ID')}</p>
+                    ${shipping > 0 ? `<p style="margin: 5px 0; font-size: 0.9rem;">🚚 Ongkir: Rp ${shipping.toLocaleString('id-ID')}</p>` : ''}
+                    <p style="margin: 10px 0 0; font-weight: 700; font-size: 1.1rem; color: var(--primary);">💳 Total: Rp ${total.toLocaleString('id-ID')}</p>
+                </div>
+
+                <div style="background: #f5f7fa; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 10px; color: var(--primary);">📌 Pengiriman</h4>
+                    <p style="margin: 5px 0;"><strong>${selectedDelivery === 'pickup' ? '🚶 Ambil Sendiri' : '🚗 Pengiriman'}</strong></p>
+                    <p style="margin: 5px 0; font-size: 0.9rem;">📍 Tujuan: ${location}</p>
+                </div>
+
+                ${notes ? `<div style="background: #f5f7fa; border-radius: 10px; padding: 15px; margin-bottom: 15px;">
+                    <h4 style="margin: 0 0 10px; color: var(--primary);">📝 Catatan</h4>
+                    <p style="margin: 0; font-size: 0.9rem;">${notes}</p>
+                </div>` : ''}
+
+                <div style="background: rgba(149, 225, 211, 0.2); border: 2px solid var(--success); border-radius: 10px; padding: 12px; text-align: center;">
+                    <p style="margin: 0; font-weight: 600; color: var(--success);">✨ Pesanan akan diproses dalam 5-15 menit</p>
+                    <p style="margin: 5px 0 0; font-size: 0.85rem;">Hubungi tempat makan untuk update status pesanan</p>
+                </div>
+            `;
+
+            document.getElementById("confirmContent").innerHTML = confirmHTML;
+            closeOrderModal();
+            document.getElementById("confirmModal").style.display = "block";
+        }
+
+        function closeConfirmModal() {
+            document.getElementById("confirmModal").style.display = "none";
+        }
+
+        function orderPlace(name, menu, minPrice) {
+            const placeIndex = placeOptions.findIndex(p => p.name === name);
+            openOrderModal(placeIndex);
+        }
+
+        function showRecipeSuggestions() {
+            const preferences = getUserPreferences();
+            const allowed = recipes.filter(recipe => {
+                const allergySafe = !preferences.allergies.some(allergy => recipe.allergens.includes(allergy));
+                const nutritionMatch = !preferences.preferenceTags.length ||
+                    preferences.preferenceTags.some(pref => recipe.type.toLowerCase().includes(pref.split(" ")[0].toLowerCase()));
+                return allergySafe && nutritionMatch;
+            });
+            const list = allowed.length ? allowed : recipes;
+            const container = document.getElementById("recipeResult");
+            container.innerHTML = "";
+
+            list.forEach(recipe => {
+                const card = document.createElement("div");
+                card.className = "item-card";
+                card.setAttribute("data-icon", "👨‍🍳");
+                card.innerHTML = `
+                    <h3>🍳 ${recipe.name}</h3>
+                    <small>💰 Rp ${recipe.cost.toLocaleString('id-ID')} | 🔥 ${recipe.calories} kkal</small>
+                    <p><strong>Bahan:</strong> ${recipe.ingredients.join(", ")}</p>
+                    <p><strong>Cara:</strong> ${recipe.steps}</p>
+                    <div class="meta">
+                        <span class="badge success">${recipe.type}</span>
+                    </div>`;
+                container.appendChild(card);
+            });
+        }
+
+        function setMealReminders() {
+            const breakfastTime = document.getElementById("breakfastTime").value;
+            const lunchTime = document.getElementById("lunchTime").value;
+            const dinnerTime = document.getElementById("dinnerTime").value;
+            const status = document.getElementById("reminderStatus");
+
+            if (!breakfastTime || !lunchTime || !dinnerTime) {
+                status.innerText = "❌ Pilih waktu untuk semua jadwal makan.";
+                return;
+            }
+
+            scheduleReminder(breakfastTime, "🌅 Saatnya sarapan! Pilih menu hemat & sehat.");
+            scheduleReminder(lunchTime, "🌞 Waktunya makan siang. Jangan lupa porsi seimbang!");
+            scheduleReminder(dinnerTime, "🌙 Makan malam sudah menunggu. Tetap hemat & bergizi!");
+
+            status.innerText = "✅ Reminder AKTIF! Jangan tutup halaman ini 🔔";
+        }
+
+        function scheduleReminder(timeString, message) {
+            const [hour, minute] = timeString.split(":").map(Number);
+            const now = new Date();
+            const target = new Date();
+            target.setHours(hour, minute, 0, 0);
+            if (target <= now) target.setDate(target.getDate() + 1);
+            const delay = target - now;
+
+            setTimeout(() => {
+                sendNotification(message);
+                setInterval(() => sendNotification(message), 24 * 60 * 60 * 1000);
+            }, delay);
+        }
+
+        function sendNotification(text) {
+            if (!("Notification" in window)) {
+                alert(text);
+                return;
+            }
+            if (Notification.permission === "granted") {
+                new Notification("🍱 MENU MAKAN HEMAT", { body: text, icon: "🍱" });
+            } else if (Notification.permission !== "denied") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        new Notification("🍱 MENU MAKAN HEMAT", { body: text, icon: "🍱" });
+                    } else {
+                        alert(text);
+                    }
+                });
+            } else {
+                alert(text);
+            }
+        }
+
+        function openAdvancedWindow() {
+            const url = window.location.href.split('#')[0] + '#fitur-lanjutan';
+            window.open(url, '_blank');
+        }
+
+        function jumpToFeatures() {
+            const target = document.getElementById('fitur-lanjutan');
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        window.addEventListener("load", () => {
+            if (window.location.hash === '#fitur-lanjutan') {
+                const target = document.getElementById('fitur-lanjutan');
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+                const firstDetail = document.querySelector('details');
+                if (firstDetail) {
+                    firstDetail.open = true;
+                }
+            }
+            showRecipeSuggestions();
+            showPlaceRecommendations();
+            
+            // Get user location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    userLocation = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                });
+            }
+        });
+
+        // Close modals when clicking outside
+        window.onclick = function(event) {
+            const orderModal = document.getElementById("orderModal");
+            const confirmModal = document.getElementById("confirmModal");
+            if (event.target === orderModal) {
+                orderModal.style.display = "none";
+            }
+            if (event.target === confirmModal) {
+                confirmModal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
